@@ -21,9 +21,9 @@ img {
   border: none;
   border-radius: 10px;
   background-color: rgb(12, 66, 241);
-  padding: 15px 40px;
+  padding: 10px 40px;
   font-size: 18px;
-
+ 
 } 
 button:hover {
   background-color: yellow;
