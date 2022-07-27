@@ -30,4 +30,4 @@ function onStop(){
     btnStop.disabled = true
     }
     return
-}
+};

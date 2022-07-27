@@ -25,17 +25,16 @@ const amountInput = form.querySelector("input[name = amount]")
 form.addEventListener("submit",onSubmitForm)
 
 function createPromise(position, delay) {
-  const newMuPromise = new Promise((resolve, reject) => {
+  return newMuPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
       if(shouldResolve) {
         resolve({position,delay});
-      } else {
+      } 
         reject({position,delay});
-      }
     },delay);
   });
- return newMuPromise
+ //return newMuPromise
 };
 
 function onSubmitForm(event) {
@@ -53,6 +52,6 @@ function onSubmitForm(event) {
     .catch(({position,delay}) => {
       Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
     });
-    delayValue += stepValue
+   delayValue += stepValue
   }
 }
