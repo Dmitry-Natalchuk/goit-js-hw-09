@@ -20,9 +20,9 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const form = document.querySelector(".form");
 const delayInput = form.querySelector("input[name = delay]");
 const stepInput = form.querySelector("input[name = step]");
-const amountInput = form.querySelector("input[name = amount]")
+const amountInput = form.querySelector("input[name = amount]");
 
-form.addEventListener("submit",onSubmitForm)
+form.addEventListener("submit",onSubmitForm);
 
 function createPromise(position, delay) {
   return newMuPromise = new Promise((resolve, reject) => {
@@ -54,4 +54,4 @@ function onSubmitForm(event) {
     });
    delayValue += stepValue
   }
-}
+};
