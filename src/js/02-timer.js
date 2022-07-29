@@ -23,10 +23,10 @@ const refs = {
 refs.btn.disabled = true;
 let timerId = null;
 
-function startTimer(onBtn) {
-      if(onBtn.disabled)  {
+function startTimer() {
+    /*   if(onBtn.disabled)  {
       return 
-    }; 
+    };  */
     //onBtn.disabled = true
     timerId = setInterval(()=> {
         const saveTime = Date.now();
