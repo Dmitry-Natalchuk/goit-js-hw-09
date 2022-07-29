@@ -24,10 +24,10 @@ refs.btn.disabled = true;
 let timerId = null;
 
 function startTimer(onBtn) {
-      if(onBtn.disabled) {
-      return
+      if(onBtn.disabled)  {
+      return 
     }; 
-    onBtn.disabled = false
+    //onBtn.disabled = true
     timerId = setInterval(()=> {
         const saveTime = Date.now();
         const totalSaveTime = userTime - saveTime;
@@ -71,6 +71,7 @@ function updateTextContent({ days, hours, minute, seconds }) {
     refs.spanMinutes.textContent = minute;
     refs.spanHours.textContent = hours;
     refs.spanDays.textContent = days;
+    refs.btn.disabled = true
   };
 
 const options = {
@@ -82,9 +83,9 @@ const options = {
        const userTimeNow = Date.now();
        userTime = selectedDates[0]
        //console.log(userTimeNow);
-      if(userTime < userTimeNow ) {
+      if(userTime <= userTimeNow) {
         Notify.failure(`❌ Please choose a date in the future`);
-        refs.btn.disabled = true;
+        //refs.btn.disabled = true;
         return
       }
        Notify.success(`✅ Good choice,сlick on start`);

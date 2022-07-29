@@ -20,7 +20,7 @@ img {
  button {
   border: none;
   border-radius: 10px;
-  background-color: rgb(12, 66, 241);
+  border: 1px solid;
   padding: 10px 40px;
   font-size: 18px;
  

@@ -42,7 +42,7 @@ function onSubmitForm(event) {
 
   let delayValue = +delayInput.value;
   let stepValue = +stepInput.value;
-  let amountValue = +amountInput.value;
+  let amountValue = +amountInput.value + 1;
 
   for (let i = 1 ; i < amountValue; i++){
     createPromise(i,delayValue)
