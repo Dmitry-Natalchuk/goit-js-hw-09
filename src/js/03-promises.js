@@ -27,7 +27,7 @@ const amountInput = form.querySelector("input[name = amount]");
 form.addEventListener("submit",onSubmitForm);
 
 function createPromise(position, delay) {
-  return  Promise((resolve, reject) => {
+  const myPromisNew =  Promise((resolve, reject) => {
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
       if(shouldResolve) {
@@ -36,6 +36,7 @@ function createPromise(position, delay) {
         reject({position,delay});
     },delay);
   })
+  return myPromisNew
 };
 
 function onSubmitForm(event) {
