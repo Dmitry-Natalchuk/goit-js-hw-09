@@ -22,11 +22,12 @@ const refs = {
 //divTimer.style
 refs.btn.disabled = true;
 let timerId = null;
+let userTime = null;
 
-function startTimer() {
-    /*   if(onBtn.disabled)  {
+function startTimer(onBtn) {
+       if(onBtn.disabled)  {
       return 
-    };   */
+    };  
     //onBtn.disabled = true
     timerId = setInterval(()=> {
         const saveTime = Date.now();
@@ -83,7 +84,8 @@ const options = {
        const userTimeNow = Date.now();
        userTime = selectedDates[0]
        //console.log(userTimeNow);
-      if(userTime <= userTimeNow) {
+      if(userTime <= userTimeNow)
+       {
         Notify.failure(`❌ Please choose a date in the future`);
         refs.btn.disabled = true;
         return
