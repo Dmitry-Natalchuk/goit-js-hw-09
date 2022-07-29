@@ -21,6 +21,8 @@ const form = document.querySelector(".form");
 const delayInput = form.querySelector("input[name = delay]");
 const stepInput = form.querySelector("input[name = step]");
 const amountInput = form.querySelector("input[name = amount]");
+//const btnForm = document.querySelector("button")
+
 
 form.addEventListener("submit",onSubmitForm);
 
