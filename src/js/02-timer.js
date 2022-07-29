@@ -26,7 +26,7 @@ let timerId = null;
 function startTimer() {
     /*   if(onBtn.disabled)  {
       return 
-    };  */
+    };   */
     //onBtn.disabled = true
     timerId = setInterval(()=> {
         const saveTime = Date.now();
@@ -90,7 +90,7 @@ const options = {
       }
        Notify.success(`✅ Good choice,сlick on start`);
        refs.btn.disabled = false
-    },
+    }
 };
 flatpickr(refs.input,options);
 refs.btn.addEventListener("click",startTimer);
