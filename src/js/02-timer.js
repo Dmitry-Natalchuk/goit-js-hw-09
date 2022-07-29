@@ -85,7 +85,7 @@ const options = {
        //console.log(userTimeNow);
       if(userTime <= userTimeNow) {
         Notify.failure(`❌ Please choose a date in the future`);
-        //refs.btn.disabled = true;
+        refs.btn.disabled = true;
         return
       }
        Notify.success(`✅ Good choice,сlick on start`);
